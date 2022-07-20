@@ -1,2 +1,2 @@
-
+LMS1xx:husky/fath_pivot_mount_description:husky/flir_camera_description:husky/flir_camera_driver:husky/husky_description:husky/husky_desktop:husky/husky_gazebo:husky/husky_msgs:husky/husky_navigation:husky/husky_simulator:husky/husky_viz
 -DCATKIN_DEVEL_PREFIX=/home/ninad/git_ws/ninad_husky/devel -DCMAKE_INSTALL_PREFIX=/home/ninad/git_ws/ninad_husky/install -G Unix Makefiles

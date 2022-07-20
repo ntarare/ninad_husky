@@ -131,6 +131,17 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/ninad/git_ws/ninad_husky/build/gtest/cmake_install.cmake")
+  include("/home/ninad/git_ws/ninad_husky/build/husky/fath_pivot_mount_description/cmake_install.cmake")
+  include("/home/ninad/git_ws/ninad_husky/build/husky/flir_camera_description/cmake_install.cmake")
+  include("/home/ninad/git_ws/ninad_husky/build/husky/flir_camera_driver/cmake_install.cmake")
+  include("/home/ninad/git_ws/ninad_husky/build/husky/husky_desktop/cmake_install.cmake")
+  include("/home/ninad/git_ws/ninad_husky/build/husky/husky_simulator/cmake_install.cmake")
+  include("/home/ninad/git_ws/ninad_husky/build/husky/husky_msgs/cmake_install.cmake")
+  include("/home/ninad/git_ws/ninad_husky/build/husky/husky_description/cmake_install.cmake")
+  include("/home/ninad/git_ws/ninad_husky/build/husky/husky_gazebo/cmake_install.cmake")
+  include("/home/ninad/git_ws/ninad_husky/build/husky/husky_navigation/cmake_install.cmake")
+  include("/home/ninad/git_ws/ninad_husky/build/husky/husky_viz/cmake_install.cmake")
+  include("/home/ninad/git_ws/ninad_husky/build/LMS1xx/cmake_install.cmake")
 
 endif()
 
