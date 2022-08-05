@@ -1,0 +1,8 @@
+prefix=/home/ninad/git_ws/ninad_husky/devel
+
+Name: exploration_server
+Description: Description of exploration_server
+Version: 0.4.2
+Cflags: -I/home/ninad/git_ws/ninad_husky/src/frontier_exploration/exploration_server/include
+Libs: -L${prefix}/lib 
+Requires: actionlib costmap_2d exploration_msgs roscpp tf
