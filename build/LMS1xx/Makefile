@@ -90,6 +90,17 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -123,17 +134,6 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -181,6 +181,51 @@ run_tests_lms1xx_roslaunch-check_launch_LMS1xx.launch: LMS1xx/CMakeFiles/run_tes
 run_tests_lms1xx_roslaunch-check_launch_LMS1xx.launch/fast:
 	cd /home/ninad/git_ws/ninad_husky/build && $(MAKE) -f LMS1xx/CMakeFiles/run_tests_lms1xx_roslaunch-check_launch_LMS1xx.launch.dir/build.make LMS1xx/CMakeFiles/run_tests_lms1xx_roslaunch-check_launch_LMS1xx.launch.dir/build
 .PHONY : run_tests_lms1xx_roslaunch-check_launch_LMS1xx.launch/fast
+
+# Convenience name for target.
+LMS1xx/CMakeFiles/_run_tests_lms1xx_roslaunch-check.dir/rule:
+	cd /home/ninad/git_ws/ninad_husky/build && $(MAKE) -f CMakeFiles/Makefile2 LMS1xx/CMakeFiles/_run_tests_lms1xx_roslaunch-check.dir/rule
+.PHONY : LMS1xx/CMakeFiles/_run_tests_lms1xx_roslaunch-check.dir/rule
+
+# Convenience name for target.
+_run_tests_lms1xx_roslaunch-check: LMS1xx/CMakeFiles/_run_tests_lms1xx_roslaunch-check.dir/rule
+
+.PHONY : _run_tests_lms1xx_roslaunch-check
+
+# fast build rule for target.
+_run_tests_lms1xx_roslaunch-check/fast:
+	cd /home/ninad/git_ws/ninad_husky/build && $(MAKE) -f LMS1xx/CMakeFiles/_run_tests_lms1xx_roslaunch-check.dir/build.make LMS1xx/CMakeFiles/_run_tests_lms1xx_roslaunch-check.dir/build
+.PHONY : _run_tests_lms1xx_roslaunch-check/fast
+
+# Convenience name for target.
+LMS1xx/CMakeFiles/roslint.dir/rule:
+	cd /home/ninad/git_ws/ninad_husky/build && $(MAKE) -f CMakeFiles/Makefile2 LMS1xx/CMakeFiles/roslint.dir/rule
+.PHONY : LMS1xx/CMakeFiles/roslint.dir/rule
+
+# Convenience name for target.
+roslint: LMS1xx/CMakeFiles/roslint.dir/rule
+
+.PHONY : roslint
+
+# fast build rule for target.
+roslint/fast:
+	cd /home/ninad/git_ws/ninad_husky/build && $(MAKE) -f LMS1xx/CMakeFiles/roslint.dir/build.make LMS1xx/CMakeFiles/roslint.dir/build
+.PHONY : roslint/fast
+
+# Convenience name for target.
+LMS1xx/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/ninad/git_ws/ninad_husky/build && $(MAKE) -f CMakeFiles/Makefile2 LMS1xx/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+.PHONY : LMS1xx/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_nodejs: LMS1xx/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+geometry_msgs_generate_messages_nodejs/fast:
+	cd /home/ninad/git_ws/ninad_husky/build && $(MAKE) -f LMS1xx/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make LMS1xx/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
+.PHONY : geometry_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 LMS1xx/CMakeFiles/_run_tests_lms1xx_roslaunch-check_launch_LMS1xx.launch.dir/rule:
@@ -241,6 +286,36 @@ roscpp_generate_messages_nodejs: LMS1xx/CMakeFiles/roscpp_generate_messages_node
 roscpp_generate_messages_nodejs/fast:
 	cd /home/ninad/git_ws/ninad_husky/build && $(MAKE) -f LMS1xx/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make LMS1xx/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
 .PHONY : roscpp_generate_messages_nodejs/fast
+
+# Convenience name for target.
+LMS1xx/CMakeFiles/clean_test_results_lms1xx.dir/rule:
+	cd /home/ninad/git_ws/ninad_husky/build && $(MAKE) -f CMakeFiles/Makefile2 LMS1xx/CMakeFiles/clean_test_results_lms1xx.dir/rule
+.PHONY : LMS1xx/CMakeFiles/clean_test_results_lms1xx.dir/rule
+
+# Convenience name for target.
+clean_test_results_lms1xx: LMS1xx/CMakeFiles/clean_test_results_lms1xx.dir/rule
+
+.PHONY : clean_test_results_lms1xx
+
+# fast build rule for target.
+clean_test_results_lms1xx/fast:
+	cd /home/ninad/git_ws/ninad_husky/build && $(MAKE) -f LMS1xx/CMakeFiles/clean_test_results_lms1xx.dir/build.make LMS1xx/CMakeFiles/clean_test_results_lms1xx.dir/build
+.PHONY : clean_test_results_lms1xx/fast
+
+# Convenience name for target.
+LMS1xx/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
+	cd /home/ninad/git_ws/ninad_husky/build && $(MAKE) -f CMakeFiles/Makefile2 LMS1xx/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+.PHONY : LMS1xx/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_lisp: LMS1xx/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_lisp
+
+# fast build rule for target.
+geometry_msgs_generate_messages_lisp/fast:
+	cd /home/ninad/git_ws/ninad_husky/build && $(MAKE) -f LMS1xx/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make LMS1xx/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+.PHONY : geometry_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 LMS1xx/CMakeFiles/roscpp_generate_messages_py.dir/rule:
@@ -378,6 +453,51 @@ sensor_msgs_generate_messages_lisp/fast:
 .PHONY : sensor_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
+LMS1xx/CMakeFiles/run_tests_lms1xx_roslaunch-check.dir/rule:
+	cd /home/ninad/git_ws/ninad_husky/build && $(MAKE) -f CMakeFiles/Makefile2 LMS1xx/CMakeFiles/run_tests_lms1xx_roslaunch-check.dir/rule
+.PHONY : LMS1xx/CMakeFiles/run_tests_lms1xx_roslaunch-check.dir/rule
+
+# Convenience name for target.
+run_tests_lms1xx_roslaunch-check: LMS1xx/CMakeFiles/run_tests_lms1xx_roslaunch-check.dir/rule
+
+.PHONY : run_tests_lms1xx_roslaunch-check
+
+# fast build rule for target.
+run_tests_lms1xx_roslaunch-check/fast:
+	cd /home/ninad/git_ws/ninad_husky/build && $(MAKE) -f LMS1xx/CMakeFiles/run_tests_lms1xx_roslaunch-check.dir/build.make LMS1xx/CMakeFiles/run_tests_lms1xx_roslaunch-check.dir/build
+.PHONY : run_tests_lms1xx_roslaunch-check/fast
+
+# Convenience name for target.
+LMS1xx/CMakeFiles/LMS1xx_node.dir/rule:
+	cd /home/ninad/git_ws/ninad_husky/build && $(MAKE) -f CMakeFiles/Makefile2 LMS1xx/CMakeFiles/LMS1xx_node.dir/rule
+.PHONY : LMS1xx/CMakeFiles/LMS1xx_node.dir/rule
+
+# Convenience name for target.
+LMS1xx_node: LMS1xx/CMakeFiles/LMS1xx_node.dir/rule
+
+.PHONY : LMS1xx_node
+
+# fast build rule for target.
+LMS1xx_node/fast:
+	cd /home/ninad/git_ws/ninad_husky/build && $(MAKE) -f LMS1xx/CMakeFiles/LMS1xx_node.dir/build.make LMS1xx/CMakeFiles/LMS1xx_node.dir/build
+.PHONY : LMS1xx_node/fast
+
+# Convenience name for target.
+LMS1xx/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/ninad/git_ws/ninad_husky/build && $(MAKE) -f CMakeFiles/Makefile2 LMS1xx/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+.PHONY : LMS1xx/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_nodejs: LMS1xx/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+sensor_msgs_generate_messages_nodejs/fast:
+	cd /home/ninad/git_ws/ninad_husky/build && $(MAKE) -f LMS1xx/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make LMS1xx/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
+.PHONY : sensor_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
 LMS1xx/CMakeFiles/_run_tests_lms1xx_gtest.dir/rule:
 	cd /home/ninad/git_ws/ninad_husky/build && $(MAKE) -f CMakeFiles/Makefile2 LMS1xx/CMakeFiles/_run_tests_lms1xx_gtest.dir/rule
 .PHONY : LMS1xx/CMakeFiles/_run_tests_lms1xx_gtest.dir/rule
@@ -421,6 +541,21 @@ LMS1xx: LMS1xx/CMakeFiles/LMS1xx.dir/rule
 LMS1xx/fast:
 	cd /home/ninad/git_ws/ninad_husky/build && $(MAKE) -f LMS1xx/CMakeFiles/LMS1xx.dir/build.make LMS1xx/CMakeFiles/LMS1xx.dir/build
 .PHONY : LMS1xx/fast
+
+# Convenience name for target.
+LMS1xx/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule:
+	cd /home/ninad/git_ws/ninad_husky/build && $(MAKE) -f CMakeFiles/Makefile2 LMS1xx/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+.PHONY : LMS1xx/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_eus: LMS1xx/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_eus
+
+# fast build rule for target.
+geometry_msgs_generate_messages_eus/fast:
+	cd /home/ninad/git_ws/ninad_husky/build && $(MAKE) -f LMS1xx/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make LMS1xx/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
+.PHONY : geometry_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 LMS1xx/CMakeFiles/test_buffer.dir/rule:
@@ -468,6 +603,21 @@ run_tests_lms1xx/fast:
 .PHONY : run_tests_lms1xx/fast
 
 # Convenience name for target.
+LMS1xx/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
+	cd /home/ninad/git_ws/ninad_husky/build && $(MAKE) -f CMakeFiles/Makefile2 LMS1xx/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+.PHONY : LMS1xx/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_cpp: LMS1xx/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_cpp
+
+# fast build rule for target.
+geometry_msgs_generate_messages_cpp/fast:
+	cd /home/ninad/git_ws/ninad_husky/build && $(MAKE) -f LMS1xx/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make LMS1xx/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+.PHONY : geometry_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
 LMS1xx/CMakeFiles/_run_tests_lms1xx_gtest_test_buffer.dir/rule:
 	cd /home/ninad/git_ws/ninad_husky/build && $(MAKE) -f CMakeFiles/Makefile2 LMS1xx/CMakeFiles/_run_tests_lms1xx_gtest_test_buffer.dir/rule
 .PHONY : LMS1xx/CMakeFiles/_run_tests_lms1xx_gtest_test_buffer.dir/rule
@@ -481,51 +631,6 @@ _run_tests_lms1xx_gtest_test_buffer: LMS1xx/CMakeFiles/_run_tests_lms1xx_gtest_t
 _run_tests_lms1xx_gtest_test_buffer/fast:
 	cd /home/ninad/git_ws/ninad_husky/build && $(MAKE) -f LMS1xx/CMakeFiles/_run_tests_lms1xx_gtest_test_buffer.dir/build.make LMS1xx/CMakeFiles/_run_tests_lms1xx_gtest_test_buffer.dir/build
 .PHONY : _run_tests_lms1xx_gtest_test_buffer/fast
-
-# Convenience name for target.
-LMS1xx/CMakeFiles/LMS1xx_node.dir/rule:
-	cd /home/ninad/git_ws/ninad_husky/build && $(MAKE) -f CMakeFiles/Makefile2 LMS1xx/CMakeFiles/LMS1xx_node.dir/rule
-.PHONY : LMS1xx/CMakeFiles/LMS1xx_node.dir/rule
-
-# Convenience name for target.
-LMS1xx_node: LMS1xx/CMakeFiles/LMS1xx_node.dir/rule
-
-.PHONY : LMS1xx_node
-
-# fast build rule for target.
-LMS1xx_node/fast:
-	cd /home/ninad/git_ws/ninad_husky/build && $(MAKE) -f LMS1xx/CMakeFiles/LMS1xx_node.dir/build.make LMS1xx/CMakeFiles/LMS1xx_node.dir/build
-.PHONY : LMS1xx_node/fast
-
-# Convenience name for target.
-LMS1xx/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/ninad/git_ws/ninad_husky/build && $(MAKE) -f CMakeFiles/Makefile2 LMS1xx/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
-.PHONY : LMS1xx/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_nodejs: LMS1xx/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-sensor_msgs_generate_messages_nodejs/fast:
-	cd /home/ninad/git_ws/ninad_husky/build && $(MAKE) -f LMS1xx/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make LMS1xx/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
-.PHONY : sensor_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-LMS1xx/CMakeFiles/run_tests_lms1xx_roslaunch-check.dir/rule:
-	cd /home/ninad/git_ws/ninad_husky/build && $(MAKE) -f CMakeFiles/Makefile2 LMS1xx/CMakeFiles/run_tests_lms1xx_roslaunch-check.dir/rule
-.PHONY : LMS1xx/CMakeFiles/run_tests_lms1xx_roslaunch-check.dir/rule
-
-# Convenience name for target.
-run_tests_lms1xx_roslaunch-check: LMS1xx/CMakeFiles/run_tests_lms1xx_roslaunch-check.dir/rule
-
-.PHONY : run_tests_lms1xx_roslaunch-check
-
-# fast build rule for target.
-run_tests_lms1xx_roslaunch-check/fast:
-	cd /home/ninad/git_ws/ninad_husky/build && $(MAKE) -f LMS1xx/CMakeFiles/run_tests_lms1xx_roslaunch-check.dir/build.make LMS1xx/CMakeFiles/run_tests_lms1xx_roslaunch-check.dir/build
-.PHONY : run_tests_lms1xx_roslaunch-check/fast
 
 # Convenience name for target.
 LMS1xx/CMakeFiles/roslint_lms1xx.dir/rule:
@@ -573,6 +678,21 @@ sensor_msgs_generate_messages_py/fast:
 .PHONY : sensor_msgs_generate_messages_py/fast
 
 # Convenience name for target.
+LMS1xx/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
+	cd /home/ninad/git_ws/ninad_husky/build && $(MAKE) -f CMakeFiles/Makefile2 LMS1xx/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+.PHONY : LMS1xx/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_py: LMS1xx/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_py
+
+# fast build rule for target.
+geometry_msgs_generate_messages_py/fast:
+	cd /home/ninad/git_ws/ninad_husky/build && $(MAKE) -f LMS1xx/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make LMS1xx/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+.PHONY : geometry_msgs_generate_messages_py/fast
+
+# Convenience name for target.
 LMS1xx/CMakeFiles/run_tests_lms1xx_gtest.dir/rule:
 	cd /home/ninad/git_ws/ninad_husky/build && $(MAKE) -f CMakeFiles/Makefile2 LMS1xx/CMakeFiles/run_tests_lms1xx_gtest.dir/rule
 .PHONY : LMS1xx/CMakeFiles/run_tests_lms1xx_gtest.dir/rule
@@ -586,51 +706,6 @@ run_tests_lms1xx_gtest: LMS1xx/CMakeFiles/run_tests_lms1xx_gtest.dir/rule
 run_tests_lms1xx_gtest/fast:
 	cd /home/ninad/git_ws/ninad_husky/build && $(MAKE) -f LMS1xx/CMakeFiles/run_tests_lms1xx_gtest.dir/build.make LMS1xx/CMakeFiles/run_tests_lms1xx_gtest.dir/build
 .PHONY : run_tests_lms1xx_gtest/fast
-
-# Convenience name for target.
-LMS1xx/CMakeFiles/clean_test_results_lms1xx.dir/rule:
-	cd /home/ninad/git_ws/ninad_husky/build && $(MAKE) -f CMakeFiles/Makefile2 LMS1xx/CMakeFiles/clean_test_results_lms1xx.dir/rule
-.PHONY : LMS1xx/CMakeFiles/clean_test_results_lms1xx.dir/rule
-
-# Convenience name for target.
-clean_test_results_lms1xx: LMS1xx/CMakeFiles/clean_test_results_lms1xx.dir/rule
-
-.PHONY : clean_test_results_lms1xx
-
-# fast build rule for target.
-clean_test_results_lms1xx/fast:
-	cd /home/ninad/git_ws/ninad_husky/build && $(MAKE) -f LMS1xx/CMakeFiles/clean_test_results_lms1xx.dir/build.make LMS1xx/CMakeFiles/clean_test_results_lms1xx.dir/build
-.PHONY : clean_test_results_lms1xx/fast
-
-# Convenience name for target.
-LMS1xx/CMakeFiles/roslint.dir/rule:
-	cd /home/ninad/git_ws/ninad_husky/build && $(MAKE) -f CMakeFiles/Makefile2 LMS1xx/CMakeFiles/roslint.dir/rule
-.PHONY : LMS1xx/CMakeFiles/roslint.dir/rule
-
-# Convenience name for target.
-roslint: LMS1xx/CMakeFiles/roslint.dir/rule
-
-.PHONY : roslint
-
-# fast build rule for target.
-roslint/fast:
-	cd /home/ninad/git_ws/ninad_husky/build && $(MAKE) -f LMS1xx/CMakeFiles/roslint.dir/build.make LMS1xx/CMakeFiles/roslint.dir/build
-.PHONY : roslint/fast
-
-# Convenience name for target.
-LMS1xx/CMakeFiles/_run_tests_lms1xx_roslaunch-check.dir/rule:
-	cd /home/ninad/git_ws/ninad_husky/build && $(MAKE) -f CMakeFiles/Makefile2 LMS1xx/CMakeFiles/_run_tests_lms1xx_roslaunch-check.dir/rule
-.PHONY : LMS1xx/CMakeFiles/_run_tests_lms1xx_roslaunch-check.dir/rule
-
-# Convenience name for target.
-_run_tests_lms1xx_roslaunch-check: LMS1xx/CMakeFiles/_run_tests_lms1xx_roslaunch-check.dir/rule
-
-.PHONY : _run_tests_lms1xx_roslaunch-check
-
-# fast build rule for target.
-_run_tests_lms1xx_roslaunch-check/fast:
-	cd /home/ninad/git_ws/ninad_husky/build && $(MAKE) -f LMS1xx/CMakeFiles/_run_tests_lms1xx_roslaunch-check.dir/build.make LMS1xx/CMakeFiles/_run_tests_lms1xx_roslaunch-check.dir/build
-.PHONY : _run_tests_lms1xx_roslaunch-check/fast
 
 src/LMS1xx.o: src/LMS1xx.cpp.o
 
@@ -723,12 +798,18 @@ help:
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... run_tests_lms1xx_roslaunch-check_launch_LMS1xx.launch"
+	@echo "... edit_cache"
+	@echo "... _run_tests_lms1xx_roslaunch-check"
+	@echo "... roslint"
+	@echo "... geometry_msgs_generate_messages_nodejs"
 	@echo "... install/local"
 	@echo "... _run_tests_lms1xx_roslaunch-check_launch_LMS1xx.launch"
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... test"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_nodejs"
+	@echo "... clean_test_results_lms1xx"
+	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... sensor_msgs_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
@@ -739,24 +820,23 @@ help:
 	@echo "... sensor_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... sensor_msgs_generate_messages_lisp"
+	@echo "... run_tests_lms1xx_roslaunch-check"
+	@echo "... LMS1xx_node"
+	@echo "... sensor_msgs_generate_messages_nodejs"
 	@echo "... _run_tests_lms1xx_gtest"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... LMS1xx"
+	@echo "... geometry_msgs_generate_messages_eus"
 	@echo "... test_buffer"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... run_tests_lms1xx"
+	@echo "... geometry_msgs_generate_messages_cpp"
 	@echo "... _run_tests_lms1xx_gtest_test_buffer"
-	@echo "... LMS1xx_node"
-	@echo "... sensor_msgs_generate_messages_nodejs"
-	@echo "... run_tests_lms1xx_roslaunch-check"
 	@echo "... roslint_lms1xx"
 	@echo "... _run_tests_lms1xx"
 	@echo "... sensor_msgs_generate_messages_py"
+	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... run_tests_lms1xx_gtest"
-	@echo "... clean_test_results_lms1xx"
-	@echo "... roslint"
-	@echo "... edit_cache"
-	@echo "... _run_tests_lms1xx_roslaunch-check"
 	@echo "... src/LMS1xx.o"
 	@echo "... src/LMS1xx.i"
 	@echo "... src/LMS1xx.s"
