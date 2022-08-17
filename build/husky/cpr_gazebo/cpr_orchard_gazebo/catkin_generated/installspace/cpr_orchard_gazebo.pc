@@ -1,0 +1,8 @@
+prefix=/home/ninad/git_ws/ninad_husky/install
+
+Name: cpr_orchard_gazebo
+Description: Description of cpr_orchard_gazebo
+Version: 0.2.3
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
